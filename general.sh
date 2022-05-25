@@ -32,7 +32,7 @@ WANNA_MONGO=0
 if [ $WANNA_MONGO = 1 ] || [ $WANNA_ALL = 1 ]
 then
 	echo [+] calling mongo install
-	./install_mongo
+	./install_mongo.sh
 else
 	echo [-] skipping mongo install
 fi
@@ -41,16 +41,16 @@ WANNA_DOCKER=0
 if [ $WANNA_DOCKER = 1 ] || [ $WANNA_ALL = 1 ] 
 then
 	echo [+] calling docker install
-	./install_docker
+	./install_docker.sh
 else
 	echo [-] skipping docker install
 fi
 
-WANNA_GO=False
+WANNA_GO=0
 if [ $WANNA_GO = 1 ] || [ $WANNA_ALL = 1 ]
 then
 	echo [+] calling go install
-	./install_go
+	./install_go.sh
 else
 	echo [-] skipping go install
 fi
